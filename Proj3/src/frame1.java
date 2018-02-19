@@ -13,6 +13,11 @@ import javax.swing.JPanel;
 import javax.swing.border.TitledBorder;
 import java.awt.SystemColor;
 
+import javax.swing.JButton;
+import javax.swing.JOptionPane;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
 public class frame1 {
 
 	private JFrame frmSearchEngineMaintenance;
@@ -108,5 +113,56 @@ public class frame1 {
 		lblNewLabel = new JLabel("");
 		lblNewLabel.setBounds(0, 413, 649, 81);
 		frmSearchEngineMaintenance.getContentPane().add(lblNewLabel);
+		
+		JButton addFile = new JButton("Add File");
+		addFile.setBounds(90, 2, 80, 30);
+
+		JButton rebuildOutOfDate = new JButton("Rebuild Out-of-Date");
+		rebuildOutOfDate.setBounds(250, 2, 150, 30);
+		
+		JButton removeSelectedFile = new JButton("Remove Selected Files");
+		removeSelectedFile.setBounds(450, 2, 170, 30);
+		
+		JButton resetWindows = new JButton("Reset Windows");
+		resetWindows.setBounds(10, 49, 140, 30);
+		
+		addFile.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null, 
+						"This button does not work");
+			}
+		}
+				);
+		rebuildOutOfDate.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null, 
+						"This button does not work");
+			}
+		}
+				);
+		removeSelectedFile.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null, 
+						"This button does not work");
+			}
+		}
+				);
+		resetWindows.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null, 
+						"This button does not work");
+			}
+		}
+				);
+		
+		panel_3.add(addFile);
+		frmSearchEngineMaintenance.getContentPane().add(panel_3);
+		panel_3.add(rebuildOutOfDate);
+		frmSearchEngineMaintenance.getContentPane().add(panel_3);
+		panel_3.add(removeSelectedFile);
+		frmSearchEngineMaintenance.getContentPane().add(panel_3);
+		panel_3.add(resetWindows);
+		frmSearchEngineMaintenance.getContentPane().add(panel_3);
+		
 	}
 }
