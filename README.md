@@ -24,7 +24,7 @@ Karl Schmidt, Username: KSS0007
 *Added Project 3 & Design UI branch.
 
 
-
+----------------------------------------------------------------------------
 
 Emily Mahoney, Username: Emahoney2
   Created an organizational excel checklist to help keep the team focused on what is needed and what needs to be done.
@@ -33,7 +33,7 @@ Emily Mahoney, Username: Emahoney2
   *Added her part in the README.md file.
   
   
-  
+  ----------------------------------------------------------------------------
   
 Jonathan Cruz, Username:  CruzJonathan
   Created the main page GUI along with button setup on that page.  
