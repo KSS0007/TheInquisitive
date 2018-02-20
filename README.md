@@ -1,7 +1,7 @@
 # TheInquisitive
 
 
-Team Lead:  Jonathan Cruz
+Team Lead:  Jonathan Cruz \n
   Team Organization:  Centralized Workflow
   Team Name:  The Inquisitive Minds
   Team Members:  Karl Schmidt, Emily Mahoney, Jonathan Cruz
