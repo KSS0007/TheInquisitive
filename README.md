@@ -1,5 +1,6 @@
 # TheInquisitive
 
+
 Team Lead:  Jonathan Cruz
   Team Organization:  Centralized Workflow
   Team Name:  The Inquisitive Minds
