@@ -1,6 +1,9 @@
 # TheInquisitive
 
 Team Lead:  Jonathan Cruz
+Team Organization:  Centralized Workflow
+Team Name:  The Inquisitive Minds
+Team Members:  Karl Schmidt, Emily Mahoney, Jonathan Cruz
 
 
 COP-2805C Java II Project
@@ -14,5 +17,5 @@ Emily Mahoney, Username: Emahoney2
   Created the Search Engine - Index Maintenance GUI, and it's layout.
   Added her part in the README.md file.
   
-  Jonathan Cruz, Username:  CruzJonathan
+Jonathan Cruz, Username:  CruzJonathan
   Created the main page GUI along with button setup on that page.  
