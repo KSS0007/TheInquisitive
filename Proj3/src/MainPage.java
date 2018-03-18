@@ -78,6 +78,7 @@ private void initialize()
 		panel4.add(lblSearchTerms);
 		
 		JTextField txtSearchHere = new JTextField("Type Here...");
+		txtSearchHere.setToolTipText("Please enter a search term.");
 		txtSearchHere.setBounds(100, 37, 300, 16);
 		txtSearchHere.setHorizontalAlignment(SwingConstants.LEFT);
 		txtSearchHere.setFont(new Font("SansSerif", Font.PLAIN, 11));
@@ -87,24 +88,28 @@ private void initialize()
 		ButtonGroup bgroup = new ButtonGroup();
 		
 		JRadioButton jRadioButton1 = new JRadioButton("All of these Search Terms");
+		jRadioButton1.setToolTipText("All search terms will be selected.");
 		jRadioButton1.setBounds(40, 70, 180, 27);
 		jRadioButton1.setFont(new Font("SansSerif", Font.PLAIN, 13));
 		panel4.add(jRadioButton1);
 		bgroup.add(jRadioButton1);
 		
 		JRadioButton jRadioButton2 = new JRadioButton("Any of these Search Terms");
+		jRadioButton2.setToolTipText("Any search terms will be selected.");
 		jRadioButton2.setBounds(250, 70, 200, 27);
 		jRadioButton2.setFont(new Font("SansSerif", Font.PLAIN, 13));
 		panel4.add(jRadioButton2);
 		bgroup.add(jRadioButton2);
 		
 		JRadioButton jRadioButton3 = new JRadioButton("Exact Phrase");
+		jRadioButton3.setToolTipText("Exact phrases will be selected.");
 		jRadioButton3.setBounds(450, 70, 180, 27);
 		jRadioButton3.setFont(new Font("SansSerif", Font.PLAIN, 13));
 		panel4.add(jRadioButton3);
 		bgroup.add(jRadioButton3);
 
 		JButton btnsearch = new JButton("Search");
+		btnsearch.setToolTipText("This button will launch a search for terms.");
 		btnsearch.setBounds(500, 35, 90, 20);
 		btnsearch.setFont(new Font("SansSerif", Font.PLAIN, 15));
 		panel4.add(btnsearch);		
@@ -167,6 +172,7 @@ private void initialize()
 		panel5.add(lblNumberIndex);
 		
 		JButton btnmaintenance = new JButton("Maintenance");
+		btnmaintenance.setToolTipText("This button will launch the maintenance page.");
 		btnmaintenance.setBounds(20, 20, 119, 20);
 		btnmaintenance.setFont(new Font("SansSerif", Font.PLAIN, 15));
 		panel5.add(btnmaintenance);
@@ -181,6 +187,7 @@ private void initialize()
 		});
 		
 		JButton btnabout = new JButton("About");
+		btnabout.setToolTipText("This button provides information about the program.");
 		btnabout.setBounds(530, 20, 90, 20);
 		panel5.add(btnabout);
 		btnabout.setFont(new Font("SansSerif", Font.PLAIN, 15));

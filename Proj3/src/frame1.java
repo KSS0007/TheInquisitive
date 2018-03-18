@@ -1,5 +1,6 @@
 import java.awt.EventQueue;
 
+
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 import java.awt.Color;
@@ -116,15 +117,19 @@ public class frame1 {
 			frmSearchEngineMaintenance.getContentPane().add(lblNewLabel);
 			
 			JButton addFile = new JButton("Add File");
+			addFile.setToolTipText("This button will allow you to add new files.");
 			addFile.setBounds(90, 2, 80, 30);
 
 			JButton rebuildOutOfDate = new JButton("Rebuild Out-of-Date");
+			rebuildOutOfDate.setToolTipText("This button rebuilds out-of-date data.");
 			rebuildOutOfDate.setBounds(250, 2, 150, 30);
 			
 			JButton removeSelectedFile = new JButton("Remove Selected Files");
+			removeSelectedFile.setToolTipText("This button will remove files you have selected.");
 			removeSelectedFile.setBounds(450, 2, 170, 30);
 			
 			JButton resetWindows = new JButton("Reset Windows");
+			resetWindows.setToolTipText("This button will reset all windows.");
 			resetWindows.setBounds(10, 49, 140, 30);
 			
 			addFile.addActionListener(new ActionListener() {
