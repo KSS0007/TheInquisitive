@@ -12,6 +12,8 @@ import java.awt.Window.Type;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.TitledBorder;
+import javax.swing.text.JTextComponent;
+
 import java.awt.SystemColor;
 import java.io.*;
 
@@ -24,6 +26,9 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JTextArea;
+import javax.swing.UIManager;
+import javax.swing.JTree;
 
 public class frame1 {
 
@@ -35,6 +40,7 @@ public class frame1 {
 		private JLabel lblNewLabel;
 		private JPanel panel_3;
 		private JLabel lblSearchEngineVersion;
+		protected JTextComponent txtrTextarea;
 
 		/**
 		 * Launch the application.
@@ -138,9 +144,16 @@ public class frame1 {
 			resetWindows.setBounds(10, 49, 140, 30);
 			
 			addFile.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-					JOptionPane.showMessageDialog(null, 
-							"This button does not work");
+				public void actionPerformed(ActionEvent arg0) {
+					openFile of = new openFile();
+					
+					try {
+						of.PickMe();
+					} catch(Exception e) {
+						// 100 auto-generated catch block
+						e.printStackTrace();
+					}
+					Jlist.setText(of.sb.toString());
 				}
 			}
 					);
@@ -175,6 +188,10 @@ public class frame1 {
 			panel_3.add(resetWindows);
 			frmSearchEngineMaintenance.getContentPane().add(panel_3);
 			
+			JList list = new JList();
+			list.setBackground(UIManager.getColor("Button.background"));
+			list.setBounds(10, 116, 299, 284);
+			frmSearchEngineMaintenance.getContentPane().add(list);
+			
 		}
-	
 }
