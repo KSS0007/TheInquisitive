@@ -21,6 +21,10 @@ Karl Schmidt, Username: KSS0007
 
 *Added Project 3 & Design UI branch.
 
+*Grouped the Radio Buttons together.
+
+*Worked on coding functionality for the Remove Selected File Button.
+
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 Emily Mahoney, Username: Emahoney2
