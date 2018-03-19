@@ -9,7 +9,13 @@ Team Name: The Inquisitive Minds
 
 Team Members: Karl Schmidt, Emily Mahoney, Jonathan Cruz
 
-Karl Schmidt, Username: KSS0007 Created the groups GitHub repository called TheInquisitive. Worked on coding the functionality and location of the buttons used in the Search Engine Index Maintenance.
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Karl Schmidt, Username: KSS0007 
+
+*Created the groups GitHub repository called TheInquisitive. 
+
+*Worked on coding the functionality and location of the buttons used in the Search Engine Index Maintenance.
 
 *Added his part in the README.md file.
 
@@ -28,6 +34,8 @@ Emily Mahoney, Username: Emahoney2
 *Successfully linked together the main page and maintenance page together, the maintenance button now works.
 
 *Added tooltips for each button, describes what the purpose of the button is.
+
+*Created an openFile.java code that should allow the user to pull files and add them to the GUI
 
 -------------------------------------------------------------------------------------------------------------------------------------------
 
