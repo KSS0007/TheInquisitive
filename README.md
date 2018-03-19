@@ -31,7 +31,9 @@ Emily Mahoney, Username: Emahoney2
 
 -------------------------------------------------------------------------------------------------------------------------------------------
 
-Jonathan Cruz, Username: CruzJonathan Created the main page GUI along with button setup on that page.
+Jonathan Cruz, Username: CruzJonathan 
+
+*Created the main page GUI along with button setup on that page.
 
 *Added GUI layout of Mainpage.
 
