@@ -29,6 +29,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JTextArea;
 import javax.swing.UIManager;
 import javax.swing.JTree;
+import javax.swing.DefaultListModel;
 
 public class frame1 {
 
@@ -41,7 +42,8 @@ public class frame1 {
 		private JPanel panel_3;
 		private JLabel lblSearchEngineVersion;
 		protected JTextComponent txtrTextarea;
-
+		private JList<String> choice;
+		
 		/**
 		 * Launch the application.
 		 */
@@ -166,11 +168,16 @@ public class frame1 {
 					);
 			removeSelectedFile.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					JOptionPane.showMessageDialog(null, 
-							"This button does not work");
+								try {
+									DefaultListModel<String>model = (DefaultListModel<String>)choice.getModel();
+									model.remove(choice.getSelectedIndex());
+								}catch (Exception e1) {
+									e1.printStackTrace();
+								}
 				}
-			}
-					);
+					}
+							);
+				
 			resetWindows.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					JOptionPane.showMessageDialog(null, 
