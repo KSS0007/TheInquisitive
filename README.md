@@ -28,13 +28,15 @@ Karl Schmidt, Username: KSS0007
 
 Emily Mahoney, Username: Emahoney2
   
-  *Created an organizational excel checklist to help keep the team focused on what is needed and what needs to be done.
+ *Created an organizational excel checklist to help keep the team focused on what is needed and what needs to be done.
  
  *Created the Search Engine - Index Maintenance GUI, and it's layout.
  
  *Added her part in the README.md file.
  
+ *Successfully linked together the main page and maintenance page together, the maintenance button now works.
  
+ *Added tooltips for each button, describes what the purpose of the button is.
   
   ----------------------------------------------------------------------------
   
