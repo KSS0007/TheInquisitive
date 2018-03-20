@@ -121,7 +121,7 @@ private void initialize()
 			File file = new File("Test.txt");
 			
 			try {
-				//Searches the file for all words within the search text.
+				//Searches the file for all words within the search text
 				Scanner input = new Scanner(file);
 				while (input.hasNext()) {
 					word = input.next();
