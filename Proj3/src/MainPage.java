@@ -164,6 +164,12 @@ private void initialize()
         } else if (jRadioButton3.isSelected()) {
         	
         }
+	        //jlist for file search which will include file read
+                JList list = new JList();
+		list.setBackground(UIManager.getColor("Button.background"));
+                list.setBounds(0, 116, 650, 340);
+                frmSearchEngine.getContentPane().add(list);
+	
 	    	//jlabel for index
 		JLabel lblNumberIndex = new JLabel("Number of files indexed:");
 		lblNumberIndex.setBounds(245, 0, 200,60);
@@ -194,6 +200,7 @@ private void initialize()
 		}
 		});
 		
+		//button for About
 		JButton btnabout = new JButton("About");
 		btnabout.setToolTipText("This button provides information about the program.");
 		btnabout.setBounds(530, 20, 90, 20);
