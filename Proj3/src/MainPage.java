@@ -193,6 +193,14 @@ private void initialize()
 		btnabout.setFont(new Font("SansSerif", Font.PLAIN, 15));
 		frmSearchEngine.getContentPane().add(panel5);
 
+		btnabout.addActionListener(new ActionListener() {
+    		public void actionPerformed(ActionEvent e) {
+    		JOptionPane.showMessageDialog(null, 
+		"Search Engine Ver 1.0" + '\n' + 
+                "Written by Emily Mahoney, Jonathan Cruz & Karl Schmidt.");
+		}
+		}
+		);
 		
 }
 }
