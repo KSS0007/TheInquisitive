@@ -164,13 +164,21 @@ private void initialize()
         } else if (jRadioButton3.isSelected()) {
         	
         }
-	    
-		JLabel lblNumberIndex = new JLabel("Number of files indexed:  0");
+	    	//jlabel for index
+		JLabel lblNumberIndex = new JLabel("Number of files indexed:");
 		lblNumberIndex.setBounds(245, 0, 200,60);
 		lblNumberIndex.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNumberIndex.setFont(new Font("SansSerif", Font.PLAIN, 15));
 		panel5.add(lblNumberIndex);
 		
+		//jlabel num count for index
+		JLabel lblNumInCount = new JLabel("A");
+		lblNumInCount.setBounds(415, 0, 200,60);
+		lblNumInCount.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNumInCount.setFont(new Font("SansSerif", Font.PLAIN, 15));
+		panel5.add(lblNumInCount);
+		
+		//jbutton for maintenance
 		JButton btnmaintenance = new JButton("Maintenance");
 		btnmaintenance.setToolTipText("This button will launch the maintenance page.");
 		btnmaintenance.setBounds(20, 20, 119, 20);
