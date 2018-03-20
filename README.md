@@ -50,3 +50,11 @@ Jonathan Cruz, Username: CruzJonathan
 *Added GUI layout of Mainpage.
 
 *Added Buttons to Mainpage.
+
+*Fixed issues with About.
+
+*Added JList for file select output on Main Page (for search results).
+
+*Fixed Commentations & Additional Tooltips for Main Page.
+
+
