@@ -1,5 +1,6 @@
 import java.awt.EventQueue;
 
+
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 import java.awt.Color;
@@ -11,12 +12,24 @@ import java.awt.Window.Type;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.TitledBorder;
+import javax.swing.text.JTextComponent;
+
 import java.awt.SystemColor;
+import java.io.*;
 
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+
+import javax.swing.JButton;
+import javax.swing.JOptionPane;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JTextArea;
+import javax.swing.UIManager;
+import javax.swing.JTree;
+import javax.swing.DefaultListModel;
 
 public class frame1 {
 
@@ -28,11 +41,13 @@ public class frame1 {
 		private JLabel lblNewLabel;
 		private JPanel panel_3;
 		private JLabel lblSearchEngineVersion;
-
+		protected JTextComponent txtrTextarea;
+		private JList<String> choice;
+		
 		/**
 		 * Launch the application.
 		 */
-		public static void main(String[] args) {
+		public static void NewScreen() {
 			EventQueue.invokeLater(new Runnable() {
 				public void run() {
 					try {
@@ -115,21 +130,32 @@ public class frame1 {
 			frmSearchEngineMaintenance.getContentPane().add(lblNewLabel);
 			
 			JButton addFile = new JButton("Add File");
+			addFile.setToolTipText("This button will allow you to add new files.");
 			addFile.setBounds(90, 2, 80, 30);
 
 			JButton rebuildOutOfDate = new JButton("Rebuild Out-of-Date");
+			rebuildOutOfDate.setToolTipText("This button rebuilds out-of-date data.");
 			rebuildOutOfDate.setBounds(250, 2, 150, 30);
 			
 			JButton removeSelectedFile = new JButton("Remove Selected Files");
+			removeSelectedFile.setToolTipText("This button will remove files you have selected.");
 			removeSelectedFile.setBounds(450, 2, 170, 30);
 			
 			JButton resetWindows = new JButton("Reset Windows");
+			resetWindows.setToolTipText("This button will reset all windows.");
 			resetWindows.setBounds(10, 49, 140, 30);
 			
 			addFile.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-					JOptionPane.showMessageDialog(null, 
-							"This button does not work");
+				public void actionPerformed(ActionEvent arg0) {
+					openFile of = new openFile();
+					
+					try {
+						of.PickMe();
+					} catch(Exception e) {
+						// 100 auto-generated catch block
+						e.printStackTrace();
+					}
+					Jlist.setText(of.sb.toString());
 				}
 			}
 					);
@@ -142,11 +168,16 @@ public class frame1 {
 					);
 			removeSelectedFile.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					JOptionPane.showMessageDialog(null, 
-							"This button does not work");
+								try {
+									DefaultListModel<String>model = (DefaultListModel<String>)choice.getModel();
+									model.remove(choice.getSelectedIndex());
+								}catch (Exception e1) {
+									e1.printStackTrace();
+								}
 				}
-			}
-					);
+					}
+							);
+				
 			resetWindows.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					JOptionPane.showMessageDialog(null, 
@@ -164,6 +195,10 @@ public class frame1 {
 			panel_3.add(resetWindows);
 			frmSearchEngineMaintenance.getContentPane().add(panel_3);
 			
+			JList list = new JList();
+			list.setBackground(UIManager.getColor("Button.background"));
+			list.setBounds(10, 116, 299, 284);
+			frmSearchEngineMaintenance.getContentPane().add(list);
+			
 		}
-	
 }

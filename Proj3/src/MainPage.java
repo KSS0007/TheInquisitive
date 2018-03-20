@@ -78,6 +78,7 @@ private void initialize()
 		panel4.add(lblSearchTerms);
 		
 		JTextField txtSearchHere = new JTextField("Type Here...");
+		txtSearchHere.setToolTipText("Please enter a search term.");
 		txtSearchHere.setBounds(100, 37, 300, 16);
 		txtSearchHere.setHorizontalAlignment(SwingConstants.LEFT);
 		txtSearchHere.setFont(new Font("SansSerif", Font.PLAIN, 11));
@@ -87,24 +88,28 @@ private void initialize()
 		ButtonGroup bgroup = new ButtonGroup();
 		
 		JRadioButton jRadioButton1 = new JRadioButton("All of these Search Terms");
+		jRadioButton1.setToolTipText("All search terms will be selected.");
 		jRadioButton1.setBounds(40, 70, 180, 27);
 		jRadioButton1.setFont(new Font("SansSerif", Font.PLAIN, 13));
 		panel4.add(jRadioButton1);
 		bgroup.add(jRadioButton1);
 		
 		JRadioButton jRadioButton2 = new JRadioButton("Any of these Search Terms");
+		jRadioButton2.setToolTipText("Any search terms will be selected.");
 		jRadioButton2.setBounds(250, 70, 200, 27);
 		jRadioButton2.setFont(new Font("SansSerif", Font.PLAIN, 13));
 		panel4.add(jRadioButton2);
 		bgroup.add(jRadioButton2);
 		
 		JRadioButton jRadioButton3 = new JRadioButton("Exact Phrase");
+		jRadioButton3.setToolTipText("Exact phrases will be selected.");
 		jRadioButton3.setBounds(450, 70, 180, 27);
 		jRadioButton3.setFont(new Font("SansSerif", Font.PLAIN, 13));
 		panel4.add(jRadioButton3);
 		bgroup.add(jRadioButton3);
 
 		JButton btnsearch = new JButton("Search");
+		btnsearch.setToolTipText("This button will launch a search for terms.");
 		btnsearch.setBounds(500, 35, 90, 20);
 		btnsearch.setFont(new Font("SansSerif", Font.PLAIN, 15));
 		panel4.add(btnsearch);		
@@ -121,7 +126,7 @@ private void initialize()
 			File file = new File("Test.txt");
 			
 			try {
-				//Searches the file for all words within the search text
+				//Searches the file for all words within the search text.
 				Scanner input = new Scanner(file);
 				while (input.hasNext()) {
 					word = input.next();
@@ -159,31 +164,58 @@ private void initialize()
         } else if (jRadioButton3.isSelected()) {
         	
         }
-	    
-		JLabel lblNumberIndex = new JLabel("Number of files indexed:  0");
+	        //jlist for file search which will include file read
+                JList list = new JList();
+		list.setBackground(UIManager.getColor("Button.background"));
+                list.setBounds(0, 116, 650, 340);
+                frmSearchEngine.getContentPane().add(list);
+	
+	    	//jlabel for index
+		JLabel lblNumberIndex = new JLabel("Number of files indexed:");
 		lblNumberIndex.setBounds(245, 0, 200,60);
 		lblNumberIndex.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNumberIndex.setFont(new Font("SansSerif", Font.PLAIN, 15));
 		panel5.add(lblNumberIndex);
 		
+		//jlabel num count for index
+		JLabel lblNumInCount = new JLabel("A");
+		lblNumInCount.setBounds(415, 0, 200,60);
+		lblNumInCount.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNumInCount.setFont(new Font("SansSerif", Font.PLAIN, 15));
+		panel5.add(lblNumInCount);
+		
+		//jbutton for maintenance
 		JButton btnmaintenance = new JButton("Maintenance");
+		btnmaintenance.setToolTipText("This button will launch the maintenance page.");
 		btnmaintenance.setBounds(20, 20, 119, 20);
 		btnmaintenance.setFont(new Font("SansSerif", Font.PLAIN, 15));
 		panel5.add(btnmaintenance);
 		frmSearchEngine.getContentPane().add(panel5);
 		
 		btnmaintenance.addActionListener(new ActionListener() { 
-		public void actionPerformed (ActionEvent e){
-		//frame1.setVisible(true);
+			public void actionPerformed (ActionEvent arg0){
+
+				frame1 nw = new frame1();
+				nw.NewScreen();
 		}
 		});
 		
+		//button for About
 		JButton btnabout = new JButton("About");
+		btnabout.setToolTipText("This button provides information about the program.");
 		btnabout.setBounds(530, 20, 90, 20);
 		panel5.add(btnabout);
 		btnabout.setFont(new Font("SansSerif", Font.PLAIN, 15));
 		frmSearchEngine.getContentPane().add(panel5);
 
+		btnabout.addActionListener(new ActionListener() {
+    		public void actionPerformed(ActionEvent e) {
+    		JOptionPane.showMessageDialog(null, 
+		"Search Engine Ver 1.0" + '\n' + 
+                "Written by Emily Mahoney, Jonathan Cruz & Karl Schmidt.");
+		}
+		}
+		);
 		
 }
 }
