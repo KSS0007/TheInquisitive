@@ -21,6 +21,7 @@ import java.io.File;
 import java.util.List;
 import java.util.Scanner;
 import java.util.ArrayList;
+import javax.swing.UIManager;
 
 public class MainPage 
 {
@@ -84,6 +85,12 @@ private void initialize()
 		txtSearchHere.setFont(new Font("SansSerif", Font.PLAIN, 11));
 		panel4.add(txtSearchHere);	
 		
+		JLabel lblResults = new JLabel("Results go Here");
+		lblResults.setBounds(0, 95, 100, 25);
+		lblResults.setHorizontalAlignment(SwingConstants.LEFT);
+		lblResults.setFont(new Font("SansSerif", Font.PLAIN, 13));
+		panel4.add(lblResults);
+		
         // Grouping the RadioButtons together.
 		ButtonGroup bgroup = new ButtonGroup();
 		
@@ -137,13 +144,12 @@ private void initialize()
 							files = listOfFiles[i].getName();
 							fileNames += "\n" + file;
 						}
-
 						//lblSearchTerms.setText(fileNames);
 						}
 					}
 				}
 			}catch (Exception error) {
-				
+				lblResults.setText("No Matching files found");
 			}
 			//Scanner s1 = new Scanner(System.in);
 			//String folderPath = s1.next();
@@ -164,7 +170,7 @@ private void initialize()
         } else if (jRadioButton3.isSelected()) {
         	
         }
-	        //jlist for file search which will include file read
+	        //JList for file search which will include file read
                 JList list = new JList();
 		list.setBackground(UIManager.getColor("Button.background"));
                 list.setBounds(0, 116, 650, 340);
