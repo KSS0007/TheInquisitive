@@ -25,6 +25,8 @@ Karl Schmidt, Username: KSS0007
 
 *Worked on coding functionality for the Remove Selected File Button.
 
+*Worked on coding for the "all of the search terms" radioButton.
+
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 Emily Mahoney, Username: Emahoney2
