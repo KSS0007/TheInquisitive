@@ -21,6 +21,7 @@ import java.io.File;
 import java.util.List;
 import java.util.Scanner;
 import java.util.ArrayList;
+import javax.swing.UIManager;
 
 public class MainPage 
 {
@@ -84,6 +85,12 @@ private void initialize()
 		txtSearchHere.setFont(new Font("SansSerif", Font.PLAIN, 11));
 		panel4.add(txtSearchHere);	
 		
+		JLabel lblResults = new JLabel("Results go Here");
+		lblResults.setBounds(0, 95, 100, 25);
+		lblResults.setHorizontalAlignment(SwingConstants.LEFT);
+		lblResults.setFont(new Font("SansSerif", Font.PLAIN, 13));
+		panel4.add(lblResults);
+		
         // Grouping the RadioButtons together.
 		ButtonGroup bgroup = new ButtonGroup();
 		
@@ -137,13 +144,12 @@ private void initialize()
 							files = listOfFiles[i].getName();
 							fileNames += "\n" + file;
 						}
-
 						//lblSearchTerms.setText(fileNames);
 						}
 					}
 				}
 			}catch (Exception error) {
-				
+				lblResults.setText("No Matching files found");
 			}
 			//Scanner s1 = new Scanner(System.in);
 			//String folderPath = s1.next();
@@ -164,7 +170,7 @@ private void initialize()
         } else if (jRadioButton3.isSelected()) {
         	
         }
-	        //jlist for file search which will include file read
+	        //JList for file search which will include file read
                 JList list = new JList();
 		list.setBackground(UIManager.getColor("Button.background"));
                 list.setBounds(0, 116, 650, 340);
@@ -212,7 +218,12 @@ private void initialize()
     		public void actionPerformed(ActionEvent e) {
     		JOptionPane.showMessageDialog(null, 
 		"Search Engine Ver 1.0" + '\n' + 
-                "Written by Emily Mahoney, Jonathan Cruz & Karl Schmidt.");
+                "This program, a simple GUI, returns searches based on a small " + '\n' +
+                "set of text files. The program allows the user to enter some " + '\n' +
+                "search terms which will result in a list of file pathnames that " + '\n' +
+                "match the search." + '\n' +
+                "     " + '\n' +
+                "Written by Emily Mahoney, Jonathan Cruz, & Karl Schmidt.");
 		}
 		}
 		);
