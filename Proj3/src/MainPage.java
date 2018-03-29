@@ -56,6 +56,7 @@ private void initialize()
 		frmSearchEngine.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmSearchEngine.getContentPane().setLayout(null);
 		
+		//panel sets here
 		panel4 = new JPanel();
  		panel4.setBounds(0, 0, 668, 100);
  		frmSearchEngine.getContentPane().add(panel4);
@@ -66,18 +67,21 @@ private void initialize()
  		frmSearchEngine.getContentPane().add(panel5);
  		panel5.setLayout(null);
  		
+		//Title
 		JLabel lblSearchEngine = new JLabel("Search Engine");
 		lblSearchEngine.setBounds(250, 0, 140, 30);
 		lblSearchEngine.setHorizontalAlignment(SwingConstants.CENTER);
 		lblSearchEngine.setFont(new Font("SansSerif", Font.BOLD, 20));
 		panel4.add(lblSearchEngine);
 		
+		//Header for Search
 		JLabel lblSearchTerms = new JLabel("Search Terms:  ");
 		lblSearchTerms.setBounds(0, 34, 100, 25);
 		lblSearchTerms.setHorizontalAlignment(SwingConstants.LEFT);
 		lblSearchTerms.setFont(new Font("SansSerif", Font.PLAIN, 13));
 		panel4.add(lblSearchTerms);
 		
+		//Search Bar text field
 		JTextField txtSearchHere = new JTextField("Type Here...");
 		txtSearchHere.setToolTipText("Please enter a search term.");
 		txtSearchHere.setBounds(100, 37, 300, 16);
@@ -85,36 +89,37 @@ private void initialize()
 		txtSearchHere.setFont(new Font("SansSerif", Font.PLAIN, 11));
 		panel4.add(txtSearchHere);	
 		
+		
 		JLabel lblResults = new JLabel("Results go Here");
 		lblResults.setBounds(0, 95, 100, 25);
 		lblResults.setHorizontalAlignment(SwingConstants.LEFT);
 		lblResults.setFont(new Font("SansSerif", Font.PLAIN, 13));
 		panel4.add(lblResults);
 		
-        // Grouping the RadioButtons together.
+        	// Grouping the RadioButtons together.
 		ButtonGroup bgroup = new ButtonGroup();
-		
+			//All search radial
 		JRadioButton jRadioButton1 = new JRadioButton("All of these Search Terms");
 		jRadioButton1.setToolTipText("All search terms will be selected.");
 		jRadioButton1.setBounds(40, 70, 180, 27);
 		jRadioButton1.setFont(new Font("SansSerif", Font.PLAIN, 13));
 		panel4.add(jRadioButton1);
 		bgroup.add(jRadioButton1);
-		
+			//Any search radial
 		JRadioButton jRadioButton2 = new JRadioButton("Any of these Search Terms");
 		jRadioButton2.setToolTipText("Any search terms will be selected.");
 		jRadioButton2.setBounds(250, 70, 200, 27);
 		jRadioButton2.setFont(new Font("SansSerif", Font.PLAIN, 13));
 		panel4.add(jRadioButton2);
 		bgroup.add(jRadioButton2);
-		
+			//Exact search radial
 		JRadioButton jRadioButton3 = new JRadioButton("Exact Phrase");
 		jRadioButton3.setToolTipText("Exact phrases will be selected.");
 		jRadioButton3.setBounds(450, 70, 180, 27);
 		jRadioButton3.setFont(new Font("SansSerif", Font.PLAIN, 13));
 		panel4.add(jRadioButton3);
 		bgroup.add(jRadioButton3);
-
+			//Search button
 		JButton btnsearch = new JButton("Search");
 		btnsearch.setToolTipText("This button will launch a search for terms.");
 		btnsearch.setBounds(500, 35, 90, 20);
@@ -166,7 +171,35 @@ private void initialize()
 			//}
 			//To search any search terms.
 			} else if (jRadioButton2.isSelected()) {
-			
+			//Keep same method type for now, changing sequence.  Redo as full correct method call later.
+				String word = "";
+				String fileNames = "";
+				String files;
+				String inputWord = null;
+				File folder = new File("Test.txt");
+				File[] listOfFiles = folder.listFiles();
+				File file = new File("Test.txt");
+				try {
+					//Searches the file for all words within the search text.
+					//keep same method type & will recreate full method in another part.
+					Scanner input = new Scanner(file);
+					while (input.hasNext()) {
+						word = input.next();
+						//if word contains part of or is word
+						if (inputWord.contains(word)) {
+							//Adds the file names into a list.
+							for (int i= 0; i < listOfFiles.length; i++) {
+							if (listOfFiles[i].isFile()) {
+								files = listOfFiles[i].getName();
+								fileNames += "\n" + file;
+							}
+							//lblSearchTerms.setText(fileNames);
+							}
+						}
+					}
+				}catch (Exception error) {
+					lblResults.setText("No Matching files found");
+				}
         } else if (jRadioButton3.isSelected()) {
         	
         }
@@ -218,12 +251,7 @@ private void initialize()
     		public void actionPerformed(ActionEvent e) {
     		JOptionPane.showMessageDialog(null, 
 		"Search Engine Ver 1.0" + '\n' + 
-                "This program, a simple GUI, returns searches based on a small " + '\n' +
-                "set of text files. The program allows the user to enter some " + '\n' +
-                "search terms which will result in a list of file pathnames that " + '\n' +
-                "match the search." + '\n' +
-                "     " + '\n' +
-                "Written by Emily Mahoney, Jonathan Cruz, & Karl Schmidt.");
+                "Written by Emily Mahoney, Jonathan Cruz & Karl Schmidt.");
 		}
 		}
 		);

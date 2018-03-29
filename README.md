@@ -28,6 +28,8 @@ Karl Schmidt, Username: KSS0007
 
 *Worked on coding functionality for the Remove Selected File Button.
 
+*Created a label for the results of the serarch in the main page.
+
 
 
 Emily Mahoney, Username: Emahoney2
@@ -46,6 +48,8 @@ Emily Mahoney, Username: Emahoney2
 
 *Updated About button which elaborates on what the purpose of the program is.
 
+*Added to Reset radio button.
+
 
 
 Jonathan Cruz, Username: CruzJonathan
@@ -61,3 +65,5 @@ Jonathan Cruz, Username: CruzJonathan
 *Added JList for file select output on Main Page (for search results).
 
 *Fixed Commentations & Additional Tooltips for Main Page.
+
+*Added code for radio button functionality 'Any'

@@ -180,8 +180,11 @@ public class frame1 {
 				
 			resetWindows.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
+					for (JLabel jLabel : jLabel) {
+					    jLabel.setText("");
+					}
 					JOptionPane.showMessageDialog(null, 
-							"This button does not work");
+							"All files have been reset.");
 				}
 			}
 					);
