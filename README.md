@@ -44,6 +44,8 @@ Emily Mahoney, Username: Emahoney2
 
 *Created an openFile.java code that should allow the user to pull files and add them to the GUI
 
+*Updated About button which elaborates on what the purpose of the program is.
+
 
 
 Jonathan Cruz, Username: CruzJonathan
