@@ -56,6 +56,7 @@ private void initialize()
 		frmSearchEngine.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmSearchEngine.getContentPane().setLayout(null);
 		
+		//panel sets here
 		panel4 = new JPanel();
  		panel4.setBounds(0, 0, 668, 100);
  		frmSearchEngine.getContentPane().add(panel4);
@@ -66,18 +67,21 @@ private void initialize()
  		frmSearchEngine.getContentPane().add(panel5);
  		panel5.setLayout(null);
  		
+		//Title
 		JLabel lblSearchEngine = new JLabel("Search Engine");
 		lblSearchEngine.setBounds(250, 0, 140, 30);
 		lblSearchEngine.setHorizontalAlignment(SwingConstants.CENTER);
 		lblSearchEngine.setFont(new Font("SansSerif", Font.BOLD, 20));
 		panel4.add(lblSearchEngine);
 		
+		//Header for Search
 		JLabel lblSearchTerms = new JLabel("Search Terms:  ");
 		lblSearchTerms.setBounds(0, 34, 100, 25);
 		lblSearchTerms.setHorizontalAlignment(SwingConstants.LEFT);
 		lblSearchTerms.setFont(new Font("SansSerif", Font.PLAIN, 13));
 		panel4.add(lblSearchTerms);
 		
+		//Search Bar text field
 		JTextField txtSearchHere = new JTextField("Type Here...");
 		txtSearchHere.setToolTipText("Please enter a search term.");
 		txtSearchHere.setBounds(100, 37, 300, 16);
@@ -85,36 +89,37 @@ private void initialize()
 		txtSearchHere.setFont(new Font("SansSerif", Font.PLAIN, 11));
 		panel4.add(txtSearchHere);	
 		
+		
 		JLabel lblResults = new JLabel("Results go Here");
 		lblResults.setBounds(0, 95, 100, 25);
 		lblResults.setHorizontalAlignment(SwingConstants.LEFT);
 		lblResults.setFont(new Font("SansSerif", Font.PLAIN, 13));
 		panel4.add(lblResults);
 		
-        // Grouping the RadioButtons together.
+        	// Grouping the RadioButtons together.
 		ButtonGroup bgroup = new ButtonGroup();
-		
+			//All search radial
 		JRadioButton jRadioButton1 = new JRadioButton("All of these Search Terms");
 		jRadioButton1.setToolTipText("All search terms will be selected.");
 		jRadioButton1.setBounds(40, 70, 180, 27);
 		jRadioButton1.setFont(new Font("SansSerif", Font.PLAIN, 13));
 		panel4.add(jRadioButton1);
 		bgroup.add(jRadioButton1);
-		
+			//Any search radial
 		JRadioButton jRadioButton2 = new JRadioButton("Any of these Search Terms");
 		jRadioButton2.setToolTipText("Any search terms will be selected.");
 		jRadioButton2.setBounds(250, 70, 200, 27);
 		jRadioButton2.setFont(new Font("SansSerif", Font.PLAIN, 13));
 		panel4.add(jRadioButton2);
 		bgroup.add(jRadioButton2);
-		
+			//Exact search radial
 		JRadioButton jRadioButton3 = new JRadioButton("Exact Phrase");
 		jRadioButton3.setToolTipText("Exact phrases will be selected.");
 		jRadioButton3.setBounds(450, 70, 180, 27);
 		jRadioButton3.setFont(new Font("SansSerif", Font.PLAIN, 13));
 		panel4.add(jRadioButton3);
 		bgroup.add(jRadioButton3);
-
+			//Search button
 		JButton btnsearch = new JButton("Search");
 		btnsearch.setToolTipText("This button will launch a search for terms.");
 		btnsearch.setBounds(500, 35, 90, 20);
