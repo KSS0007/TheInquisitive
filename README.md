@@ -27,6 +27,8 @@ Karl Schmidt, Username: KSS0007
 
 *Worked on coding for the "all of the search terms" radioButton.
 
+*Created a label for the results of the serarch in the main page.
+
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 Emily Mahoney, Username: Emahoney2
