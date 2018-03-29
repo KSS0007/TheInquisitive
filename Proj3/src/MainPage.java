@@ -166,7 +166,35 @@ private void initialize()
 			//}
 			//To search any search terms.
 			} else if (jRadioButton2.isSelected()) {
-			
+			//Keep same method type for now, changing sequence.  Redo as full correct method call later.
+				String word = "";
+				String fileNames = "";
+				String files;
+				String inputWord = null;
+				File folder = new File("Test.txt");
+				File[] listOfFiles = folder.listFiles();
+				File file = new File("Test.txt");
+				try {
+					//Searches the file for all words within the search text.
+					//keep same method type & will recreate full method in another part.
+					Scanner input = new Scanner(file);
+					while (input.hasNext()) {
+						word = input.next();
+						//if word contains part of or is word
+						if (inputWord.contains(word)) {
+							//Adds the file names into a list.
+							for (int i= 0; i < listOfFiles.length; i++) {
+							if (listOfFiles[i].isFile()) {
+								files = listOfFiles[i].getName();
+								fileNames += "\n" + file;
+							}
+							//lblSearchTerms.setText(fileNames);
+							}
+						}
+					}
+				}catch (Exception error) {
+					lblResults.setText("No Matching files found");
+				}
         } else if (jRadioButton3.isSelected()) {
         	
         }
